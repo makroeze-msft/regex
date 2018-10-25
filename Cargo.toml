@@ -29,7 +29,7 @@ aho-corasick = "0.6.7"
 # For skipping along search text quickly when a leading byte is known.
 memchr = "2.0.2"
 # For managing regex caches quickly across multiple threads.
-thread_local = "0.3.6"
+thread_local = {path = "../thread_local-rs"}
 # For parsing regular expressions.
 regex-syntax = { path = "regex-syntax", version = "0.6.2" }
 # For compiling UTF-8 decoding into automata.
@@ -115,10 +115,10 @@ path = "tests/test_crates_regex.rs"
 name = "crates-regex"
 
 [profile.release]
-debug = true
+debug = false
 
 [profile.bench]
-debug = true
+debug = false
 
 [profile.test]
-debug = true
+debug = false
